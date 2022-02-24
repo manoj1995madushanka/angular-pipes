@@ -1,12 +1,18 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
   name: 'shorten'
 })
 export class ShortenPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-    return null;
+  /**
+   * return first 10 characters of a provided string
+   * */
+  transform(value: any): string {
+    if (value.length > 10) {
+      return value.substr(0, 10) + ' ...';
+    }
+    return value;
   }
 
 }
