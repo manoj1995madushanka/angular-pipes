@@ -8,9 +8,9 @@ export class ShortenPipe implements PipeTransform {
   /**
    * return first 10 characters of a provided string
    * */
-  transform(value: any, limit: number): string {
+  transform(value: any, start: number, limit: number): string {
     if (value.length > limit) {
-      return value.substr(0, limit) + ' ...';
+      return value.substr(start, limit) + ' ...';
     }
     return value;
   }
