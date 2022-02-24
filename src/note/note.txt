@@ -1,0 +1,4 @@
+pipes are used to transform output in template
+
+for generate custom pipe use below command
+  ng g p pipeName
