@@ -11,7 +11,7 @@
             {{ server.status }}
           </span>
           <!--pipe works left to right direction-->
-          <strong>{{ server.name | shorten }}</strong> |
+          <strong>{{ server.name | shorten:5 }}</strong> |
           {{ server.instanceType | uppercase }} |
           {{ server.started | date: 'fullDate' | uppercase }}
         </li>
