@@ -16,7 +16,7 @@
           [ngClass]="getStatusClasses(server)">
           <span
             class="badge">
-            {{ server.status }}
+            {{ server.status | reverse }}
           </span>
           <!--pipe works left to right direction-->
           <strong>{{ server.name | shorten:0:5 }}</strong> |
