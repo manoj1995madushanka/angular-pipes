@@ -1,7 +1,13 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
+/**
+ * this pure: false property can make performance issue
+ * in angular default this property is true because it does not update filter source when data change after filtering
+ * In thi false behaviour filter again call when changes occured
+ * */
 @Pipe({
-  name: 'filter'
+  name: 'filter',
+  pure: false
 })
 export class FilterPipe implements PipeTransform {
 
