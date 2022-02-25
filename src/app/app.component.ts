@@ -35,6 +35,12 @@ export class AppComponent implements OnInit {
 
   filteredStatus: string;
 
+  appStatus = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('App Status');
+    }, 2000);
+  });
+
   ngOnInit(): void {
     this.filteredStatus = '';
   }
